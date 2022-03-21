@@ -57,7 +57,6 @@ html {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
 }
 
 .days div {
@@ -74,8 +73,12 @@ html {
     opacity: 0.5;
 }
 
-.days div:hover:not(.today) {
+.days div:hover:not(.day) {
     background-color: rgb(131, 55, 202);
     border: 0.2em solid #fff;
     cursor: pointer;
+}
+
+.current-day {
+    background-color: rgb(178, 140, 223);
 }
