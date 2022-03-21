@@ -8,7 +8,7 @@ function render() {
     const prevMonthLastDay = new Date(date.getFullYear(), date.getMonth(), 0).getDate();
 
     const lastIndexCurrentMonth = new Date(date.getFullYear(), date.getMonth() + 1, 1).getDay();
-    const nextMonthDays = 7 - lastIndexCurrentMonth - 1;
+    const nextMonthDays = 7 - lastIndexCurrentMonth;
 
     const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 
