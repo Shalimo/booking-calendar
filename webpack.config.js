@@ -7,7 +7,7 @@ module.exports = {
   entry: './src/js/script.js',
   output: {
     filename: 'bundle.js',
-    path: __dirname + '/js'
+    path: __dirname + "../booking-calendar/js/"
   },
   watch: true,
 

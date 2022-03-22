@@ -1,7 +1,10 @@
-const getData = async () => {
-    const res = await fetch('http://www.mocky.io/v2/5944e07213000038025b6f30');
+const postData = async (url, data) => {
+    let result = await fetch(url, {
+        method: 'POST',
+        body: data
+    })
 
-    return await res.json();
+    return await result.text();
 }
 
-export {getData};
+export {postData};
