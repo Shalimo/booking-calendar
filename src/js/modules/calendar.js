@@ -1,6 +1,6 @@
 const date = new Date();
 
-function render() {
+function renderCalendar() {
     const lastCurrentMonthDays = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate(); // последнее число текущего месяца
     date.setDate(1); 
     const firstDayCurrentMonth = date.getDay(); // index 2 (tue)
@@ -44,49 +44,12 @@ const next = document.querySelector('.next');
 
 prev.addEventListener('click', () => {
     date.setMonth(date.getMonth() - 1);
-    render();
+    renderCalendar();
 });
 
 next.addEventListener('click', () => {
     date.setMonth(date.getMonth() + 1);
-    render();
+    renderCalendar();
 });
 
-render();
-
-function showModal() {
-    const modal = document.querySelector(".modal-container") 
-    modal.classList.add('show');
-    modal.classList.remove('hide');
-    document.body.style.overflow = 'hidden';
-}
-
-function hideModal() {
-    const modal = document.querySelector(".modal-container");
-    modal.classList.remove('show');
-    modal.classList.add('hide');
-    document.body.style.overflow = '';
-}
-
-function modal() {
-    const btnClose = document.querySelector("[data-close]");
-    const openButtons = document.querySelectorAll('.days');
-
-    openButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            showModal();
-        });
-    });
-
-    document.addEventListener('keydown', (e) => {
-        if (e.code == 'Escape' && modal.classList.contains('show')) {
-            hideModal();
-        }
-    });
-
-    btnClose.addEventListener('click', () => {
-            hideModal();
-    });
-}
-
-modal();
+export default renderCalendar;
