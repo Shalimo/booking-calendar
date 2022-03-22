@@ -82,3 +82,43 @@ html {
 .current-day {
     background-color: rgb(178, 140, 223);
 }
+
+.modal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgb(178, 140, 223,0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.window {
+    width: 30%;
+    height: 30%;
+    background-color: rgb(178, 140, 223);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup_close {
+  cursor: pointer;
+  position: absolute;
+  top: 35rem;
+  right: 63rem;
+  font-size: 4rem;
+  color: #ffffff;
+  border: none;
+  background: transparent;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}

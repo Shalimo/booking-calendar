@@ -54,3 +54,39 @@ next.addEventListener('click', () => {
 
 render();
 
+function showModal() {
+    const modal = document.querySelector(".modal-container") 
+    modal.classList.add('show');
+    modal.classList.remove('hide');
+    document.body.style.overflow = 'hidden';
+}
+
+function hideModal() {
+    const modal = document.querySelector(".modal-container");
+    modal.classList.remove('show');
+    modal.classList.add('hide');
+    document.body.style.overflow = '';
+}
+
+function modal() {
+    const btnClose = document.querySelector("[data-close]");
+    const openButtons = document.querySelectorAll('.days');
+
+    openButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            showModal();
+        });
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.code == 'Escape' && modal.classList.contains('show')) {
+            hideModal();
+        }
+    });
+
+    btnClose.addEventListener('click', () => {
+            hideModal();
+    });
+}
+
+modal();
