@@ -29,7 +29,10 @@
                 <div>Fri</div>
                 <div>Sat</div>
             </div>
-            <div class="days"></div>
+            <div class="days">
+                
+            </div>
+            <p class="ps"></p>
         </div>
     </div>
     <div class="modal-container hide">
@@ -41,14 +44,23 @@
                     <form class="form" action="#">
 
                                         <!-- Hidden Required Fields -->
-                    <input type="hidden" name="project_name" value="Testwork of itspro">
+                    <input type="hidden" name="project_name" value="Testwork for itspro">
                     <input type="hidden" name="admin_email" value="shpoisnik@gmail.com">
                     <input type="hidden" name="form_subject" value="Calendar-form">
                     <!-- END Hidden Required Fields -->
 
                       <h2>Введите ваши данные <br>и нажмите заказать звонок</h2>
-                        <input class="form-control form_input" name="Имя" value="Name" required type="text" placeholder="Введите ваше имя">
+                        <input id="name" class="form-control form_input" name="Имя" required type="text" placeholder="Введите ваше имя">
                         <input class="form-control form_input" name="email" value="Email" required type="text" placeholder="Введите ваше имя">
+                        <div class="container-check">
+                            <p class="checkboxes">10:00</p>
+                            <input class="checkbox1" type="checkbox" value="10:00" name="Время бронирования:">
+                            <p class="checkboxes">12:00</p>
+                            <input class="checkbox2" type="checkbox" value="12:00" name="Время бронирования:">
+                            <p class="checkboxes">14:00</p>
+                            <input class="checkbox3" type="checkbox" value="14:00" name="Время бронирования:">
+                        </div>
+                        <br>
                         <button id="submit" class="text-uppercase btn-block button" name="submit" type="submit">Заказать звонок</button>
                         <p class="form_notice">Перезвоним в течение 10 минут</p>
                     </form>
@@ -57,6 +69,7 @@
         </div>
     </div>
     <script src="./js/bundle.js"></script>
-    <script src="./src/js/services/email.js"></script>
+    <script type="module" src="./src/js/services/email.js"></script>
+    <script type="module" src="./src/js/modules/checkbox.js"></script>
 </body>
 </html>

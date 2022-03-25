@@ -1,5 +1,7 @@
 $(document).ready(function() {
-
+	const name = document.querySelector('#name');
+	const days = document.querySelector('.days');
+	const p = document.querySelector('.ps');
 	//E-mail Ajax Send
 	$("form").submit(function() { //Change
 		var th = $(this);
@@ -8,7 +10,9 @@ $(document).ready(function() {
 			url: "mail.php", //Change
 			data: th.serialize()
 		}).done(function() {
-			alert("Thank you!");
+			const newE = document.createElement('p');
+			newE.innerHTML = `${name.value};`
+			days.append(newE);
 			setTimeout(function() {
 				// Done Functions
 				th.trigger("reset");

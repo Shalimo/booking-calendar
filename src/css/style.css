@@ -122,3 +122,31 @@ html {
 .hide {
     display: none;
 }
+
+.ps {
+    font-size: 200px;
+    color: red;
+}
+
+.cost {
+    text-align: center;
+}
+
+.checkboxes {
+    font-size: 20px;
+}
+
+.container-check {
+    display: flex;
+    flex-direction:column;
+}
+
+.container-check p {
+    padding: 5px 0 5px 0;
+}
+
+.checkbox {
+    transform:scale(1.3);
+    opacity:0.9;
+    cursor:pointer;
+}

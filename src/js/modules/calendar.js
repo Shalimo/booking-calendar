@@ -15,9 +15,17 @@ function renderCalendar() {
     const curentMonth = document.querySelector(".date h1");
     const currentDate = document.querySelector(".date p");
     const currentMonthDays = document.querySelector('.days');
+    const name = document.querySelector('#name');
+    const form = document.querySelector('form');
+    const obj = {
+        a: new Date().getDay() == 0,
+        b: new Date().getDay() == 5
+    }
+    console.log(obj.b)
 
     curentMonth.innerHTML = month[date.getMonth()];
     currentDate.innerHTML = date.toDateString();
+    
 
     let days = "";
 
@@ -28,9 +36,12 @@ function renderCalendar() {
     for (let i = 1; i <= lastCurrentMonthDays; i++) {
         if (i === new Date().getDate() && date.getMonth() === new Date().getMonth()) {
             days += `<div class="current-day">${i}</div>`;
+        } 
+        if (i === 5 || i == 6 || i == 12 || i == 13 || i == 19 || i == 20 || i == 25 || i == 26 ) {
+            days += `<div class="cost">${i}<br>30 рублей</div>`;
         } else {
-            days += `<div>${i}</div>`;
-        }
+            days += `<div class="cost">${i}<br>10 рублей</div>`;
+        }  
     }
 
     for (let j = 1; j <= nextMonthDays; j++) {
