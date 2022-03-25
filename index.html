@@ -8,6 +8,9 @@
     <title>Document</title>
     <script src="https://kit.fontawesome.com/970842590e.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -49,9 +52,11 @@
                     <input type="hidden" name="form_subject" value="Calendar-form">
                     <!-- END Hidden Required Fields -->
 
-                      <h2>Введите ваши данные <br>и нажмите заказать звонок</h2>
+                      <h2>Укажите данные для бронирования:</h2>
+                      <br>
                         <input id="name" class="form-control form_input" name="Имя" required type="text" placeholder="Введите ваше имя">
-                        <input class="form-control form_input" name="email" value="Email" required type="text" placeholder="Введите ваше имя">
+                        <input class="form-control form_input" name="email" required type="text" placeholder="Введите ваш email">
+                        <input id="day" class="form-control form_input" name="day" required type="text" placeholder="День">
                         <div class="container-check">
                             <p class="checkboxes">10:00</p>
                             <input class="checkbox1" type="checkbox" value="10:00" name="Время бронирования:">
@@ -61,8 +66,7 @@
                             <input class="checkbox3" type="checkbox" value="14:00" name="Время бронирования:">
                         </div>
                         <br>
-                        <button id="submit" class="text-uppercase btn-block button" name="submit" type="submit">Заказать звонок</button>
-                        <p class="form_notice">Перезвоним в течение 10 минут</p>
+                        <button class="submit" class="text-uppercase btn-block button" name="submit" type="submit">Забронировать</button>
                     </form>
                 </div>
             </div>

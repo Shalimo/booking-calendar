@@ -7,6 +7,7 @@
 html {
     font-size: 60%;
     background-color: rgb(56, 14, 95);
+    font-family: 'Noto Sans', sans-serif;
 }
 
 .container {
@@ -96,8 +97,8 @@ html {
 }
 
 .window {
-    width: 30%;
-    height: 30%;
+    width: 40%;
+    height: 40%;
     background-color: rgb(178, 140, 223);
     display: flex;
     justify-content: center;
@@ -107,8 +108,8 @@ html {
 .popup_close {
   cursor: pointer;
   position: absolute;
-  top: 35rem;
-  right: 63rem;
+  top: 31.5rem;
+  right: 55rem;
   font-size: 4rem;
   color: #ffffff;
   border: none;
@@ -150,3 +151,48 @@ html {
     opacity:0.9;
     cursor:pointer;
 }
+
+input {
+    padding:10px;
+    border-radius:10px;
+}
+
+.submit {
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid #000;
+    border-radius: 0.6em;
+    color: #000;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    padding: 1.2em 2.8em;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: black;
+}
+
+.submit:hover, .submit:focus {
+    color: black;
+    outline: 0;
+  }
+  
+  .submit {
+    -webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+  }
+  .submit:hover {
+    box-shadow: 0 0 40px 40px #e6e6fa inset;
+  }

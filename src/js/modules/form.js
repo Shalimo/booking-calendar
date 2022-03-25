@@ -1,17 +1,19 @@
-import { postData } from "../services/post-data";
-
 const form = () => {
-    const form = document.querySelectorAll('form');
-    // const input = document.querySelectorAll('input');
+    const modal = document.querySelector(".modal-container")
+    const form = document.querySelectorAll('form'); 
+    const modalForm = document.querySelector('.modal_form');
 
     form.forEach(item => {
-        item.addEventListener('submit', (e) => {
-            e.preventDefault();
-    
-            const formData = new FormData(item);
-            
-            postData('src/js/modules/server.php', formData)
-                .then(res => console.log(res))
+        item.addEventListener('submit', () => {
+        const title = document.createElement('h2');
+        title.innerHTML = "Спасибо, заявка принята";
+        modalForm.append(title);
+
+        setTimeout(() => {
+            modal.classList.remove('show');
+            modal.classList.add('hide');
+            document.body.style.overflow = '';
+        }, 1500)
         })
     })
 }
