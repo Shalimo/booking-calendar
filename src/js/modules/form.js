@@ -12,7 +12,6 @@ const form = () => {
             
             postData('src/js/modules/server.php', formData)
                 .then(res => console.log(res))
-                .catch(() => console.log('pizdec'))
         })
     })
 }

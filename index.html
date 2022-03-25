@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./src/css/style.css">
     <title>Document</title>
     <script src="https://kit.fontawesome.com/970842590e.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
     <div class="container">
@@ -38,8 +39,16 @@
                     <button data-close type="button" class="popup_close"><strong>&times;</strong></button>
                 <div class="modal_form">
                     <form class="form" action="#">
+
+                                        <!-- Hidden Required Fields -->
+                    <input type="hidden" name="project_name" value="Testwork of itspro">
+                    <input type="hidden" name="admin_email" value="shpoisnik@gmail.com">
+                    <input type="hidden" name="form_subject" value="Calendar-form">
+                    <!-- END Hidden Required Fields -->
+
                       <h2>Введите ваши данные <br>и нажмите заказать звонок</h2>
-                        <input class="form-control form_input" name="user_name" required type="text" placeholder="Введите ваше имя">
+                        <input class="form-control form_input" name="Имя" value="Name" required type="text" placeholder="Введите ваше имя">
+                        <input class="form-control form_input" name="email" value="Email" required type="text" placeholder="Введите ваше имя">
                         <button id="submit" class="text-uppercase btn-block button" name="submit" type="submit">Заказать звонок</button>
                         <p class="form_notice">Перезвоним в течение 10 минут</p>
                     </form>
@@ -48,5 +57,6 @@
         </div>
     </div>
     <script src="./js/bundle.js"></script>
+    <script src="./src/js/services/email.js"></script>
 </body>
 </html>
