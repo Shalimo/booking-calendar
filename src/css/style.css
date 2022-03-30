@@ -97,8 +97,8 @@ html {
 }
 
 .window {
-    width: 30%;
-    height: 60%;
+    width: 40%;
+    height: 40%;
     background-color: rgb(178, 140, 223);
     display: flex;
     justify-content: center;
@@ -108,8 +108,8 @@ html {
 .popup_close {
   cursor: pointer;
   position: absolute;
-  top: 22.5rem;
-  right: 64rem;
+  top: 31.5rem;
+  right: 55rem;
   font-size: 4rem;
   color: #ffffff;
   border: none;
@@ -124,17 +124,13 @@ html {
     display: none;
 }
 
-.cost {
-    text-align: center;
-    padding-top: 20px;
-    position: fixed;
-    font-size: 10px;
-    color: rgb(231, 141, 37);
+.ps {
+    font-size: 200px;
+    color: red;
 }
 
-.curr {
-    margin: 0;
-    padding: 0;
+.cost {
+    text-align: center;
 }
 
 .checkboxes {
@@ -142,25 +138,18 @@ html {
 }
 
 .container-check {
-    margin-top: 10px;
-    margin-left: 5px;
-    width: 45%;
-    border-top: solid 1px;
-    border-left: solid 1px;
     display: flex;
     flex-direction:column;
 }
 
 .container-check p {
-    padding-bottom: 5px;
-    margin-left: 15px;
+    padding: 5px 0 5px 0;
 }
 
 .checkbox {
     transform:scale(1.3);
     opacity:0.9;
     cursor:pointer;
-    margin-left: 20px;
 }
 
 input {
@@ -206,9 +195,4 @@ input {
   }
   .submit:hover {
     box-shadow: 0 0 40px 40px #e6e6fa inset;
-  }
-
-  .h-inp {
-      margin-left: 7px;
-      padding: 7px;
   }

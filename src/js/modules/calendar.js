@@ -32,14 +32,13 @@ function renderCalendar() {
     }
 
     for (let i = 1; i <= lastCurrentMonthDays; i++) {
-        // if (i === new Date().getDate() && date.getMonth() === new Date().getMonth()) {
-        //     days += `<div class="current-day">${i}</div>`;
-        // } 
-        // getDay() == 0 || getDay() == 6 ???
+        if (i === new Date().getDate() && date.getMonth() === new Date().getMonth()) {
+            days += `<div class="current-day">${i}</div>`;
+        } 
         if (i === 5 || i == 6 || i == 12 || i == 13 || i == 19 || i == 20 || i == 25 || i == 26 ) {
-            days += `<div class="curr" value="${i}">${i}<br><span class="cost"><br>30 рублей</span></div>`;
+            days += `<div class="cost" value="${i}">${i}<br>30 рублей</div>`;
         } else {
-            days += `<div class="curr" value="${i}">${i}<span class="cost"><br>10 рублей</span></div>`;
+            days += `<div class="cost" value="${i}">${i}<br>10 рублей</div>`;
         }  
 
     } 
